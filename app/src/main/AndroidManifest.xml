@@ -9,17 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Assesment2MariBelajar">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".SplashScreen" >
+        <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".ListHewanActivity" />
+        <activity android:name=".SegitigaActivity" />
+        <activity android:name=".PersegiPanjangActivity" />
+        <activity android:name=".MatematikaActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -196,7 +196,7 @@
             android:id="@+id/akun_navbar"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="170dp"
+            android:layout_marginStart="160dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="36dp"
             android:src="@drawable/review_icon" />

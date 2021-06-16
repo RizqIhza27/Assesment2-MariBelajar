@@ -4,6 +4,228 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReviewActivity">
+    tools:context=".PersegiPanjangActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#D900023E"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="52dp">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Matematika"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Luas Bangun Datar"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+
+        android:textSize="18dp"
+        android:text="ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/et_panjang"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_et_primary"
+        android:elevation="2dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/et_lebar"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_et_primary"
+        android:elevation="2dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_panjang" />
+    <EditText
+        android:id="@+id/nama_et_review"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_et_primary"
+        android:elevation="2dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/isi_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Review"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_et_review" />
+
+    <EditText
+        android:id="@+id/isi_et_review"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_et_primary"
+        android:elevation="2dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isi_review" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isi_et_review">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_primary"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginEnd="24dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_primary"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_primary"
+                android:fontFamily="@font/poppins_regular"
+                android:text="View"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginEnd="24dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_btn_delete"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#D900023E"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/home_navbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/home_icon" />
+
+        <ImageView
+            android:id="@+id/akun_navbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:src="@drawable/review_icon" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
