@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.assesment2_maribelajar.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_matematikaFragment"
+            app:destination="@id/matematikaFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_reviewActivity"
+            app:destination="@id/reviewActivity" />
+        <action
+            android:id="@+id/action_HomeFragment_to_listHewanFragment"
+            app:destination="@id/listHewanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segitigaFragment"
+        android:name="com.example.assesment2_maribelajar.SegitigaFragment"
+        android:label="fragment_segitiga"
+        tools:layout="@layout/fragment_segitiga" >
+        <action
+            android:id="@+id/action_segitigaFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_segitigaFragment_to_HomeFragment2"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_segitigaFragment_to_reviewActivity"
+            app:destination="@id/reviewActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/matematikaFragment"
+        android:name="com.example.assesment2_maribelajar.MatematikaFragment"
+        android:label="fragment_matematika"
+        tools:layout="@layout/activity_matematika" >
+        <action
+            android:id="@+id/action_matematikaFragment_to_segitigaFragment"
+            app:destination="@id/segitigaFragment" />
+        <action
+            android:id="@+id/action_matematikaFragment_to_persegiPanjang"
+            app:destination="@id/persegiPanjang" />
+        <action
+            android:id="@+id/action_matematikaFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_matematikaFragment_to_reviewActivity"
+            app:destination="@id/reviewActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/persegiPanjang"
+        android:name="com.example.assesment2_maribelajar.PersegiPanjang"
+        android:label="fragment_persegi_panjang"
+        tools:layout="@layout/fragment_persegi_panjang" >
+        <action
+            android:id="@+id/action_persegiPanjang_to_reviewActivity"
+            app:destination="@id/reviewActivity" />
+        <action
+            android:id="@+id/action_persegiPanjang_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/reviewActivity"
+        android:name="com.example.assesment2_maribelajar.ReviewActivity"
+        android:label="ReviewActivity"
+        tools:layout="@layout/activity_review"/>
+    <fragment
+        android:id="@+id/listHewanFragment"
+        android:name="com.example.assesment2_maribelajar.ListHewanFragment"
+        android:label="activity_list_hewan"
+        tools:layout="@layout/fragment_list_hewan" >
+        <action
+            android:id="@+id/action_listHewanFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>

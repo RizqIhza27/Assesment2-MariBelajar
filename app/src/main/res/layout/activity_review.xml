@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersegiPanjangActivity">
+    tools:context=".ReviewActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -29,7 +36,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_light"
-            android:text="Matematika"
+            android:text="Development"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -39,7 +46,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Luas Bangun Datar"
+            android:text="Review Aplikasi"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -59,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/et_panjang"
+        android:id="@+id/idTxt"
         android:layout_width="370dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
@@ -67,12 +74,14 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/bg_et_primary"
         android:elevation="2dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:paddingStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/et_lebar"
+        android:id="@+id/nameTxt"
         android:layout_width="370dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
@@ -80,8 +89,8 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/bg_et_primary"
         android:elevation="2dp"
-        android:textColor="@color/white"
-
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -96,20 +105,8 @@
         android:fontFamily="@font/poppins_light"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_panjang" />
-    <EditText
-        android:id="@+id/nama_et_review"
-        android:layout_width="370dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/bg_et_primary"
-        android:elevation="2dp"
-        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/idTxt" />
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/isi_review"
@@ -122,10 +119,10 @@
         android:fontFamily="@font/poppins_light"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama_et_review" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
 
     <EditText
-        android:id="@+id/isi_et_review"
+        android:id="@+id/galaxyTxt"
         android:layout_width="370dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
@@ -133,25 +130,53 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/bg_et_primary"
         android:elevation="2dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/isi_review" />
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Rate"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galaxyTxt" />
+
+    <EditText
+        android:id="@+id/typeTxt"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_et_primary"
+        android:elevation="2dp"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         android:orientation="vertical"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isi_et_review">
+        app:layout_constraintTop_toBottomOf="@+id/typeTxt">
 
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/insertBtn"
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:background="@drawable/bg_primary"
@@ -162,6 +187,7 @@
         android:textSize="20sp"
         android:layout_marginEnd="24dp"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateBtn"
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:background="@drawable/bg_primary"
@@ -177,6 +203,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="24dp">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewBtn"
                 android:layout_width="140dp"
                 android:layout_height="60dp"
                 android:background="@drawable/bg_primary"
@@ -187,6 +214,7 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="24dp"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteBtn"
                 android:layout_width="140dp"
                 android:layout_height="60dp"
                 android:background="@drawable/bg_btn_delete"
@@ -198,6 +226,8 @@
         </LinearLayout>
     </LinearLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
@@ -206,7 +236,8 @@
         android:layout_gravity="bottom"
         android:background="#D900023E"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/home_navbar"

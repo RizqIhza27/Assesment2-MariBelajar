@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.assesment2_maribelajar">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name="androidx.multidex.MultiDexApplication"
         android:theme="@style/Theme.Assesment2MariBelajar">
+
         <activity android:name=".ReviewActivity"></activity>
-        <activity android:name=".ListHewanActivity" />
-        <activity android:name=".SegitigaActivity" />
-        <activity android:name=".PersegiPanjangActivity" />
         <activity android:name=".MatematikaActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashScreen">
@@ -22,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>

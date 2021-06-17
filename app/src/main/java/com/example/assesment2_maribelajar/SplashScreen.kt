@@ -13,6 +13,7 @@ class SplashScreen : AppCompatActivity() {
         handler.postDelayed({
             val goGetStarted = Intent(this, HomeActivity::class.java)
             startActivity(goGetStarted)
+            finish()
         }, 2000)
     }
 }

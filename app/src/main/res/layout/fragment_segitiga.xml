@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/et_panjang"
+        android:id="@+id/et_alas"
         android:layout_width="370dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
@@ -95,7 +95,7 @@
         android:fontFamily="@font/poppins_light"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_panjang" />
+        app:layout_constraintTop_toBottomOf="@+id/et_alas" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -164,7 +164,7 @@
             android:layout_marginTop="16dp"
             android:src="@drawable/home_icon" />
         <ImageView
-            android:id="@+id/akun_navbar"
+            android:id="@+id/review_navbar"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="160dp"

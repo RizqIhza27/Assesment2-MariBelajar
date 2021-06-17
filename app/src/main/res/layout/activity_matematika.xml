@@ -49,13 +49,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:orientation="vertical"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_persegi"
             android:layout_width="285dp"
             android:layout_height="60dp"
             android:background="@drawable/bg_primary"
@@ -66,6 +65,7 @@
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_segitiga"
             android:layout_width="285dp"
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
@@ -100,12 +100,10 @@
             android:src="@drawable/home_icon" />
 
 
-
-
         <ImageView
-            android:id="@+id/akun_navbar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/review_navbar"
+            android:layout_width="31dp"
+            android:layout_height="34dp"
             android:layout_marginStart="160dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="36dp"
